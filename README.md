@@ -33,13 +33,12 @@ Download the latest release: https://github.com/NotoriousPyro/NuclearPlus/releas
 # How to use
 
 ## Basic setup
-![Basic setup](docs/basicsetup.png)
+***COMING SOON...***
 
 ## Research
-Research is currently limited to a single item which unlocks everything, this may be changed later...
+Research is via:
 * **Advanced nuclear**: dependant on Nuclear reactor first being completed.
-![Research: Advanced Nuclear](docs/research_advancednuclear.png)
+* **Plutonoum power production**: dependant on Robotic III and Advanced nuclear first being completed.
+![Research](docs/research.png)
+![Research Tree](docs/research_tree.png)
 
-## Recipes
-* Incineration plant
-![Recipes: ](docs/recipes_.png)

@@ -20,7 +20,7 @@
   </Target>
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <Configurations>Debug;Release</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>NotoriousPyro</Authors>

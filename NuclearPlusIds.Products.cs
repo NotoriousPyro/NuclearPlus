@@ -17,7 +17,7 @@ public partial class NuclearPlusIds
         public static readonly ProductProto.ID UranylNitrate = Ids.Products.CreateId("UranylNitrate");
         public static readonly ProductProto.ID PlutoniumNitrate = Ids.Products.CreateId("PlutoniumNitrate");
         public static readonly ProductProto.ID BreederSpentFuel = Ids.Products.CreateId("BreederSpentFuel");
-        public static readonly ProductProto.ID BreederSpentFuelFromUranium = Ids.Products.CreateId("BreederSpentFuelFromUranium");
+        //public static readonly ProductProto.ID BreederSpentFuelFromUranium = Ids.Products.CreateId("BreederSpentFuelFromUranium");
         public static readonly ProductProto.ID PlutoniumRod = Ids.Products.CreateId("PlutoniumRod");
         public static readonly ProductProto.ID PlutoniumPellets = Ids.Products.CreateId("PlutoniumPellets");
     }
