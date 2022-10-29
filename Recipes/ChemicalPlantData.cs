@@ -36,7 +36,7 @@ internal class ChemicalPlantData : IModData
             .AddInput(4, inputProductId)
             .SetDuration(20.Seconds())
             .AddOutput(2, NuclearPlusIds.Products.NitricAcid)
-            .AddOutput(24, outputProductId)
+            .AddOutput(12, outputProductId)
         .BuildAndAdd();
 
     public void RegisterData(ProtoRegistrator registrator)
