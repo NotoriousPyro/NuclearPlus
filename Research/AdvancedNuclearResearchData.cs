@@ -44,7 +44,6 @@ internal class AdvancedNuclearResearchData : IResearchNodesData
                 .AddProductToUnlock(NuclearPlusIds.Products.PlutoniumPellets)
                 .AddProductToUnlock(NuclearPlusIds.Products.PlutoniumRod)
                 .AddProductToUnlock(NuclearPlusIds.Products.SpentFuelSolutionT3)
-                .AddProductToUnlock(NuclearPlusIds.Products.UranylNitrate)
                 .AddLayoutEntityToUnlock(NuclearPlusIds.Buildings.PlutoniumBreederReactor)
                 .AddLayoutEntityToUnlock(NuclearPlusIds.Buildings.PlutoniumReactor)
                 .SetCosts(ResearchCostsTpl.Build.SetDifficulty(45))
