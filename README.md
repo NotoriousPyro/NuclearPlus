@@ -2,7 +2,7 @@
 
 Provides advanced nuclear research to the game.
 
-Currently alpha.
+> :warning: **Currently ***alpha***. Buildings and recipes may change...**
 
 Currently provides:
 * Fast breeder reactor
@@ -32,13 +32,17 @@ Download the latest release: https://github.com/NotoriousPyro/NuclearPlus/releas
 
 # How to use
 
-## Basic setup
-***COMING SOON...***
+## Uranium breeder reactor & fuel recycling
+> :warning: **Void producers from CoI.Mod.Better are used as inputs in this example**
+
+In order to extend this to support plutonium rods, simply take the output of the stage 2 distiller to a stage 3 distiller and set up another Chemical Plant II to create the rods.
+
+![Basic setup](docs/basic_setup.png)
 
 ## Research
 Research is via:
 * **Advanced nuclear**: dependant on Nuclear reactor first being completed.
-* **Plutonoum power production**: dependant on Robotic III and Advanced nuclear first being completed.
+* **Plutonium power production**: dependant on Robotic III and Advanced nuclear first being completed.
 ![Research](docs/research.png)
 ![Research Tree](docs/research_tree.png)
 
