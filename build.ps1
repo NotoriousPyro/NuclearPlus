@@ -15,6 +15,9 @@ $source = Join-Path $pwd "bin\Debug\${targetFramework}"
 $destination = Join-Path $modsFolder $modName
 
 dotnet build -c $configuration
+if ($? -eq $false) {
+    exit
+}
 if ($configuration -eq 'debug') {
     ROBOCOPY $source $destination *.dll *.pdb /S /IM
 }

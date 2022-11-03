@@ -17,5 +17,8 @@ public partial class NuclearPlusIds
         public static readonly RecipeID BreederSpentFuelRecycling = Ids.Recipes.CreateId("BreederSpentFuelRecycling");
         public static readonly RecipeID NitricAcidProduction = Ids.Recipes.CreateId("NitricAcidProduction");
         public static readonly RecipeID FissionProductsDepletedProduction = Ids.Recipes.CreateId("FissionProductsDepletedProduction");
+        public static readonly RecipeID AdvancedSteamDepletedCondensation = Ids.Recipes.CreateId("AdvancedSteamDepletedCondensation");
+        public static readonly RecipeID AdvancedSteamLpCondensation = Ids.Recipes.CreateId("AdvancedSteamLpCondensation");
+        public static readonly RecipeID AdvancedSteamHpCondensation = Ids.Recipes.CreateId("AdvancedSteamHpCondensation");
     }
 }

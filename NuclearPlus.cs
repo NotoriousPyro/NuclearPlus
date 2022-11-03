@@ -31,6 +31,8 @@ public sealed class NuclearPlus : DataOnlyMod
         // Need to register products manually, the below doesn't see the attibutes for some reason...
         //registrator.RegisterAllProducts();
         registrator.RegisterData<Buildings.ReactorData>();
+        registrator.RegisterData<Machines.AdvancedCoolingTowerData>();
+        registrator.RegisterData<Recipes.AdvancedCoolingTowerData>();
         registrator.RegisterData<Recipes.AssemblyData>();
         registrator.RegisterData<Recipes.ChemicalPlantData>();
         registrator.RegisterData<Recipes.DistillationTowerData>();

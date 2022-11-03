@@ -5,8 +5,9 @@ Provides advanced nuclear research to the game.
 > :warning: **Currently ***alpha***. Buildings and recipes may change...**
 
 Currently provides:
-* Fast breeder reactor
-* Advanced reactor
+* Fast breeder reactor (Uranium & Plutonium)
+* Plutonium reactor
+* Advanced cooling tower
 * Many new products (uranyl nitrate, plutonium nitrate, nitric acid, ...)
 
 More may come... please create an issue for any suggestions or bugs.

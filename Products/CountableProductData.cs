@@ -10,6 +10,7 @@ internal class CountableProductData : IModData
     {
         registrator.CountableProductProtoBuilder
             .Start("Plutonium rods", NuclearPlusIds.Products.PlutoniumRod)
+                .Description("Plutonium rods ready for use in a plutonium reactor. Plutonium is around 100 times more energy dense than uranium.")
                 .SetIsStorable(true)
                 .SetCanBeDiscarded(false)
                 .SetIsWaste(false)
@@ -20,6 +21,7 @@ internal class CountableProductData : IModData
 
         registrator.CountableProductProtoBuilder
             .Start("Plutonium pellets", NuclearPlusIds.Products.PlutoniumPellets)
+                .Description("These pellets need to be prepared into rods before they can be used in a reactor. Plutonium is around 100 times more energy dense than uranium.")
                 .SetIsStorable(true)
                 .SetCanBeDiscarded(false)
                 .SetIsWaste(false)
@@ -41,10 +43,11 @@ internal class CountableProductData : IModData
 
         registrator.CountableProductProtoBuilder
             .Start("Fission products (depleted)", NuclearPlusIds.Products.FissionProductsDepleted)
+                .Description("Fission products from nuclear reactor waste that has been reprocessed and crystallised in glass for safer storage.")
                 .SetIsStorable(true)
                 .SetCanBeDiscarded(false)
                 .SetIsWaste(false)
-                .SetRadioactivity(2)
+                .SetRadioactivity(1)
                 .SetPrefabPath(Assets.Base.Products.Countable.SpentFuel_prefab)
                 .SetCustomIconPath(Assets.Base.Products.Icons.SpentFuel_svg)
                 .MaxQuantityPerTransportStack(1)

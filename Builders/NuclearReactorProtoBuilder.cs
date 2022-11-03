@@ -18,8 +18,8 @@ public class NuclearReactorProtoBuilder : IProtoBuilder
         private Collections.ImmutableCollections.ImmutableArray<Entities.Static.Layout.ToolbarCategoryProto> m_category;
         private ProductProto m_coolantIn;
         private ProductProto m_coolantOut;
-        private EntityLayout m_layout;
         private List<NuclearReactorProto.FuelData> m_fuelData = new List<NuclearReactorProto.FuelData>();
+        private string m_soundPrefabPath = Assets.Base.Buildings.NuclearReactors.T1.ReactorSound_prefab;
 
         public State(NuclearReactorProtoBuilder builder, StaticEntityProto.ID id, string name)
             : base(builder, id, name)
@@ -29,9 +29,9 @@ public class NuclearReactorProtoBuilder : IProtoBuilder
             m_coolantIn = builder.ProtosDb.GetOrThrow<ProductProto>(Ids.Products.Water);
             m_coolantOut = builder.ProtosDb.GetOrThrow<ProductProto>(Ids.Products.SteamHi);
             base.SetLayout(new EntityLayoutParams(null, useNewLayoutSyntax: true, new CustomLayoutToken[1]
-			{
-				new CustomLayoutToken("-0]", (EntityLayoutParams p, int h) => new LayoutTokenSpec(-h, 5, LayoutTileConstraint.None, -h))
-			}),
+            {
+                new CustomLayoutToken("-0]", (EntityLayoutParams p, int h) => new LayoutTokenSpec(-h, 5, LayoutTileConstraint.None, -h))
+            }),
             "                              [4][4][4][4][4][4][4]",
             "      [4][4][4][4][5][5][5][5][5][5][5][5][5][5][4]",
             "      [4][4][4][4][5][5][5][5][5][5][5][5][5][5][4]",
@@ -58,7 +58,6 @@ public class NuclearReactorProtoBuilder : IProtoBuilder
             "         B@>[4][4][5][5][5][5][5][5]Y@>            ",
             "         C@>[4][4][4][4][4][4][4][4]Z@>            ",
             "               [4][4][4][4][4][4]                  ");
-            base.SetCustomIconPath(builder.Registrator.PrototypesDb.GetOrThrow<NuclearReactorProto>(Ids.Buildings.NuclearReactor).Graphics.IconPath);
             base.SetPrefabPath(Assets.Base.Buildings.NuclearReactors.NuclearReactor_prefab);
         }
 
@@ -72,6 +71,13 @@ public class NuclearReactorProtoBuilder : IProtoBuilder
         public State AddFuelPair(ProductProto fuelIn, ProductProto fuelOut, Duration duration)
         {
             m_fuelData.Add(new NuclearReactorProto.FuelData(fuelIn, fuelOut, duration));
+            return (State)this;
+        }
+
+        [MustUseReturnValue]
+        public State SetReactorSound(string prefabPath)
+        {
+            m_soundPrefabPath = prefabPath;
             return (State)this;
         }
 
@@ -101,7 +107,7 @@ public class NuclearReactorProtoBuilder : IProtoBuilder
                     nextTier: Option<NuclearReactorProto>.None,
                     graphics: new NuclearReactorProto.Gfx(
                         customIconPath: base.CustomIconPath,
-                        soundPrefabPath: "Assets/Base/Buildings/NuclearReactors/T1/ReactorSound.prefab",
+                        soundPrefabPath: m_soundPrefabPath,
                         prefabPath: base.PrefabPath,
                         categories: m_category
                     )

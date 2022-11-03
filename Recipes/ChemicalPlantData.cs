@@ -19,8 +19,8 @@ internal class ChemicalPlantData : IModData
         int outputProducts
     ) => registrator.RecipeProtoBuilder
             .Start($"{name} reprocessing", recipeId, machineId)
-            .AddInput(50, inputProductId)
-            .AddInput(50, NuclearPlusIds.Products.NitricAcid)
+            .AddInput(10, inputProductId)
+            .AddInput(10, NuclearPlusIds.Products.NitricAcid)
             .SetDuration(20.Seconds())
             .AddOutput(outputProducts, NuclearPlusIds.Products.SpentFuelSolutionT1)
         .BuildAndAdd();
@@ -35,7 +35,7 @@ internal class ChemicalPlantData : IModData
             .Start($"{name} enrichment", recipeId, machineId)
             .AddInput(4, inputProductId)
             .SetDuration(20.Seconds())
-            .AddOutput(2, NuclearPlusIds.Products.NitricAcid)
+            .AddOutput(1, NuclearPlusIds.Products.NitricAcid)
             .AddOutput(12, outputProductId)
         .BuildAndAdd();
 
@@ -54,14 +54,14 @@ internal class ChemicalPlantData : IModData
             registrator,
             recipeId: NuclearPlusIds.Recipes.SpentFuelRecycling,
             inputProductId: Ids.Products.SpentFuel,
-            outputProducts: 100
+            outputProducts: 20
         );
         registerReprocessingRecipe(
             "Breeder reactor spent fuel",
             registrator,
             recipeId: NuclearPlusIds.Recipes.BreederSpentFuelRecycling,
             inputProductId: NuclearPlusIds.Products.BreederSpentFuel,
-            outputProducts: 105
+            outputProducts: 25
         );
 
         registerEnrichmentFromNitrateRecipe(
@@ -85,7 +85,7 @@ internal class ChemicalPlantData : IModData
             .AddInput(4, NuclearPlusIds.Products.FissionProducts)
             .SetDuration(60.Seconds())
             .AddOutput(1, NuclearPlusIds.Products.NitricAcid)
-            .AddOutput(3, NuclearPlusIds.Products.FissionProductsDepleted)
+            .AddOutput(1, NuclearPlusIds.Products.FissionProductsDepleted)
         .BuildAndAdd();
     }
 }
