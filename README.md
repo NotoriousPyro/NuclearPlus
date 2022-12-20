@@ -1,5 +1,5 @@
-# WasteManagement
-## Version 1.0.4 (compatible CoI version: 0.4.12 - 0.4.13)
+# NuclearPlus
+## Version 1.0.3 (compatible CoI version: 0.4.12 - 0.4.13)
 Provides advanced nuclear research to the game.
 
 > :warning: **Currently ***alpha***. Buildings and recipes may change...**
